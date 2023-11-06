@@ -5,6 +5,8 @@
 </head>
 <body>
 
+    <p> Wellcome to global page of TIC TAC TOE the game! </p>
+
 
     <?php
         echo "siema elo 3 2 0";
