@@ -7,7 +7,7 @@
 
 
     <?php
-        echo "siema";
+        echo "siema elo 3 2 0";
     ?>
     
 </body>
