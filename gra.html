@@ -41,7 +41,6 @@
                     x = x + place;
 
                     place = "td_"+place
-                    // console.log(place)
                     document.getElementById(place).className = "xtd";
 
                     plansza[kolumna][wiersz] = "x"
@@ -103,23 +102,23 @@
         }
 
 
-        // function zmienO(){
+        function zmienO(){
 
-        //     ok = document.getElementsByClassName('otd')
+            ok = document.getElementsByClassName('otd')
 
-        //     for (var i = 0; i < ok.length; i++) {
-        //         ok[i].style.backgroundColor = "#bf0097";
-        //     }
-        // }   
+            for (var i = 0; i < ok.length; i++) {
+                ok[i].style.backgroundColor = "#bf0097";
+            }
+        }   
         
-        // function zmienX(){
+        function zmienX(){
 
-        //     ok = document.getElementsByClassName('xtd')
+            ok = document.getElementsByClassName('xtd')
 
-        //     for (var i = 0; i < ok.length; i++) {
-        //         ok[i].style.backgroundColor = "#40ff68";
-        //     }
-        // }
+            for (var i = 0; i < ok.length; i++) {
+                ok[i].style.backgroundColor = "#40ff68";
+            }
+        }
 
 
         function sprawdz(komorka){
@@ -184,8 +183,8 @@
         </table>
     </div>
 
-    <!-- <button onclick="zmienO()">zmien o</button>
-    <button onclick="zmienX()">zmien x</button> -->
+    <button onclick="zmienO()">zmien o</button>
+    <button onclick="zmienX()">zmien x</button>
 
 
     <button onclick="sprawdz(0)">spr 0</button>
