@@ -17,22 +17,40 @@
                     document.getElementById(place).src = "x_sign.png";
                     document.getElementById("td_" + place).removeAttribute("onclick");
                     x = x + place;
+
+                    place = "td_"+place
+                    console.log(place)
+                    document.getElementById(place).className = "xtd";
                 }
                 else {
                     document.getElementById(place).src = "o_sign.png";
                     document.getElementById("td_" + place).removeAttribute("onclick");
                     o = o + place;
+
+
+                    place = "td_"+place
+                    console.log(place)
+                    document.getElementById(place).className = "otd";
                 }
             }
 
 
-            if (o == 15) {
-                open_modal();
-                document.getElementById('won').innerHTML = "gracz o wygral";
-            }
-            if (x == 15) {
-                open_modal();
-                document.getElementById('won').innerHTML = "gracz x wygral";
+            // if (o == 15) {
+            //     open_modal();
+            //     document.getElementById('won').innerHTML = "gracz o wygral";
+            // }
+            // if (x == 15) {
+            //     open_modal();
+            //     document.getElementById('won').innerHTML = "gracz x wygral";
+            // }
+
+
+            if( (o || x) >= 6 ){
+                console.log("XD")
+
+                
+
+
             }
 
         }
@@ -47,6 +65,19 @@
             dialog.close();
             location.reload();
         }
+
+
+        function zmienO(){
+
+        ok = document.getElementsByClassName('otd')
+
+            for (var i = 0; i < ok.length; i++) {
+                ok[i].style.backgroundColor = "#ffffff";
+        }   
+
+}
+
+
     </script>
 </head>
 
@@ -58,40 +89,44 @@
         </dialog>
         <table>
             <tr>
-                <td onclick="klik(8)" id="td_8">
-                    <img src="blank.png" id="8">
-                </td>
                 <td onclick="klik(1)" id="td_1">
                     <img src="blank.png" id="1">
                 </td>
-                <td onclick="klik(6)" id="td_6">
-                    <img src="blank.png" id="6">
+                <td onclick="klik(2)" id="td_2">
+                    <img src="blank.png" id="2">
                 </td>
-            </tr>
-            <tr>
                 <td onclick="klik(3)" id="td_3">
                     <img src="blank.png" id="3">
-                </td>
-                <td onclick="klik(5)" id="td_5">
-                    <img src="blank.png" id="5">
-                </td>
-                <td onclick="klik(7)" id="td_7">
-                    <img src="blank.png" id="7">
                 </td>
             </tr>
             <tr>
                 <td onclick="klik(4)" id="td_4">
                     <img src="blank.png" id="4">
                 </td>
+                <td onclick="klik(5)" id="td_5">
+                    <img src="blank.png" id="5">
+                </td>
+                <td onclick="klik(6)" id="td_6">
+                    <img src="blank.png" id="6">
+                </td>
+            </tr>
+            <tr>
+                <td onclick="klik(7)" id="td_7">
+                    <img src="blank.png" id="7">
+                </td>
+                <td onclick="klik(8)" id="td_8">
+                    <img src="blank.png" id="8">
+                </td>
                 <td onclick="klik(9)" id="td_9">
                     <img src="blank.png" id="9">
-                </td>
-                <td onclick="klik(2)" id="td_2">
-                    <img src="blank.png" id="2">
                 </td>
             </tr>
         </table>
     </div>
+
+    <button onclick="zmienO()">zmien o</button>
+
+
 </body>
 
 </html>
