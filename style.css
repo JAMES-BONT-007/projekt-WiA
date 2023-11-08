@@ -9,9 +9,16 @@ table {
     border-collapse: collapse;
 }
 
-tr, td {
+tr,
+td {
     border: solid;
     border: solid 1px black;
+    transition: .5s;
+}
+
+td:hover {
+    background-color: rgb(236, 183, 103);
+    transition: .5s;
 }
 
 td {
@@ -24,4 +31,63 @@ td {
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
+}
+
+.inp_player_1 {
+    height: 50px;
+    width: 100px;
+}
+
+.inp_player_2 {
+    height: 50px;
+    width: 100px;
+}
+
+.changer {
+    float: right;
+}
+
+.changel {
+    float: left;
+}
+
+.player1 {
+    width: 50%;
+    float: left;
+}
+
+.player2 {
+    width: 50%;
+    float: right;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.img_change {
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: transform .7s ease-in-out;
+    cursor: pointer;
+}
+
+.img_change:hover {
+    transform: rotate(360deg);
+}
+
+.segment_g1 {
+    width: fit-content;
+    float: right;
+    padding: 10px;
+}
+
+.segment_g2 {
+    width: fit-content;
+    float: left;
+    padding: 10px;
+}
