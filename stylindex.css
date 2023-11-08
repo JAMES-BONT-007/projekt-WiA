@@ -1,0 +1,71 @@
+body{
+    background-color: beige;
+    text-align: center;
+    font-size: 125%;
+}
+
+#tekst{
+    margin-top: 120px;
+    font-size: 200%;
+
+    margin-bottom: 80px;
+    
+}
+
+
+#wieksze{
+
+    font-size: 130%;
+}
+
+
+#login{
+    margin: auto;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 13px;
+    background-color: rgb(42, 192, 37);
+    cursor: pointer;
+
+    transition: 0.5s ease-in;
+
+}
+
+
+#login:hover{
+
+    width: 170px;
+    padding: 13px;
+    font-size: 110%;
+
+
+}
+
+#playnow{
+
+    margin: auto;
+    text-align: center;
+    width: 190px;
+    padding: 10px;
+    border-radius: 13px;
+    background-color: rgb(165, 165, 165);
+    cursor: pointer;
+
+
+    transition: 0.7s ease-in;
+}
+
+#playnow:hover{
+
+    background-color: red;
+    width: 210px;
+    padding: 13px;
+    font-size: 110%;
+    cursor:not-allowed;
+}
+
+
+
+
+

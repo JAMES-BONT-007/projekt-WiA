@@ -1,95 +1,27 @@
-<html></html>
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>kolko</title>
-    <script>
-        var count = 0;
-        var x = 0;
-        var o = 0;
-        function klik(place) {
-            count = count + 1;
-            if (count <= 9) {
-                if (count % 2 == 0) {
-                    document.getElementById(place).src = "x_sign.png";
-                    document.getElementById("td_" + place).removeAttribute("onclick");
-                    x = x + place;
-                }
-                else {
-                    document.getElementById(place).src = "o_sign.png";
-                    document.getElementById("td_" + place).removeAttribute("onclick");
-                    o = o + place;
-                }
-            }
-
-
-            if (o == 15) {
-                open_modal();
-                document.getElementById('won').innerHTML = "gracz o wygral";
-            }
-            if (x == 15) {
-                open_modal();
-                document.getElementById('won').innerHTML = "gracz x wygral";
-            }
-
-        }
-
-        function open_modal() {
-            const dialog = document.querySelector("dialog");
-            dialog.showModal();
-        }
-
-        function close_modal() {
-            const dialog = document.querySelector("dialog");
-            dialog.close();
-            location.reload();
-        }
-    </script>
+    <title>Document</title>
+    <link rel="stylesheet" href="stylindex.css">
 </head>
-
 <body>
-    <div class="center">
-        <dialog>
-            <p id="won"></p>
-            <button onclick="close_modal()">zamknij</button>
-        </dialog>
-        <table>
-            <tr>
-                <td onclick="klik(8)" id="td_8">
-                    <img src="blank.png" id="8">
-                </td>
-                <td onclick="klik(1)" id="td_1">
-                    <img src="blank.png" id="1">
-                </td>
-                <td onclick="klik(6)" id="td_6">
-                    <img src="blank.png" id="6">
-                </td>
-            </tr>
-            <tr>
-                <td onclick="klik(3)" id="td_3">
-                    <img src="blank.png" id="3">
-                </td>
-                <td onclick="klik(5)" id="td_5">
-                    <img src="blank.png" id="5">
-                </td>
-                <td onclick="klik(7)" id="td_7">
-                    <img src="blank.png" id="7">
-                </td>
-            </tr>
-            <tr>
-                <td onclick="klik(4)" id="td_4">
-                    <img src="blank.png" id="4">
-                </td>
-                <td onclick="klik(9)" id="td_9">
-                    <img src="blank.png" id="9">
-                </td>
-                <td onclick="klik(2)" id="td_2">
-                    <img src="blank.png" id="2">
-                </td>
-            </tr>
-        </table>
+
+    <h1 id="tekst">Witaj na głownej stronie TIC TAC TOE the game!!!</h1>
+
+    <div>
+        <p>aby móc zobaczyć historię swoich meczów oraz wykonanych w danym meczu 
+            historię ruchów musisz być zalogowany!</p>   
+            
+            
+        <div id="login" onclick="location.href='login.html'">
+            ZALOGUJ
+        </div>
+        
+        <h2 id="wieksze">- LUB -</h2>
+
+        <div id="playnow" onclick="location.href='gra.html'">
+            GRAJ JAKO GOŚĆ
+        </div>
     </div>
 </body>
-
 </html>
