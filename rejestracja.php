@@ -10,7 +10,7 @@
 
 <?php
     $nazwa = $_POST["nazwa"];
-    $haslo = sha1($_POST["haslo"]); // Haszowanie hasła za pomocą SHA-1
+    $haslo = sha1($_POST["haslo"]);
 
     $conn = new mysqli("127.0.0.1", "root", "", "tictactoeDB");
 
@@ -21,7 +21,7 @@
 
     $conn->close();
 
-header("refresh:3;url=index.php"); // Przekierowanie do index.php po 3 sekundach
+header("refresh:3;url=index.php");
 ?>
 
 </body>
