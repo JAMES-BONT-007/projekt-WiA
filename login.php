@@ -16,14 +16,14 @@
     $conn = new mysqli("127.0.0.1", "root", "", "tictactoeDB");
 
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        echo "cos poszło nie tak ¯\_(ツ)_/¯";
     }
 
     $q = "SELECT * FROM users WHERE nazwa='$nazwa' AND haslo='$haslo'";
-    $result = $conn->query($q);
+    $wynik = $conn->query($q);
 
-    if ($result->num_rows > 0) {
-        // Zalogowano pomyślnie
+    if ($wynik->num_rows > 0) {
+        setcookie("konto", $nazwa, time()+3600);
     }
 
     $conn->close();
