@@ -43,21 +43,21 @@
         
         <img id="firma" src="tutelmaciek.png" alt="logo_studia"/>
     </div>
-    <audio id="mysong" loop>
+    <audio id="audio" loop>
         <source src="main.mp3" type="audio/mp3">
     </audio>
     <script>
 
-        var mysong = document.getElementById("mysong");
+        var audio = document.getElementById("audio");
         var icon = document.getElementById("icon");
         
         icon.onclick = function(){
-            if(mysong.paused){
+            if(audio.paused){
                 mysong.volume = 0.5;
                 mysong.play();
                 icon.src = "icon-black.png";
             }else{
-                mysong.pause();
+                audio.pause();
                 icon.src = "mute-black.png";
             }
         }
