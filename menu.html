@@ -1,27 +1,67 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylindex.css">
+    <title>KS THE GAME</title>
+    <link rel="stylesheet" href="stylmenu.css">
+    <link rel="icon" type="image/x-icon" href="ave.ico">
+    
+    
 </head>
 <body>
+    
+    <div id="naglowek1">
 
-    <h1 id="tekst">Witaj na głownej stronie TIC TAC TOE the game!!!</h1>
-
-    <div>
-        <p>aby móc zobaczyć historię swoich meczów oraz wykonanych w danym meczu 
-            historię ruchów musisz być zalogowany!</p>   
-            
-            
-        <div id="login" onclick="location.href='login.html'">
-            ZALOGUJ
-        </div>
         
-        <h2 id="wieksze">- LUB -</h2>
 
-        <div id="playnow" onclick="location.href='gra-wybor.html'">
-            GRAJ JAKO GOŚĆ
-        </div>
     </div>
+    <div id="naglowek2">
+
+       <img id="logo" src="logo.png" alt="logo_gry"/>
+
+    </div>
+    <div id="naglowek3">
+
+        <img id="firma" src="masny_tutel.png" alt="logo_gry"/>
+
+    </div>
+    <div id="main">
+
+        <button id="login" onclick="location.href='login.html'">ZALOGUJ </button>
+        <p>Nie masz  konta?</p>
+        <button id="guest" onclick="location.href='gra-wybor.html'">GRAJ JAKO GOŚĆ</button> 
+        
+    </div>
+
+    
+    <div id="stopka1">
+
+        <h5>&copy; MASNY TUTEL, WSZELKIE PRAWA ZASTRZEŻONE</h5> 
+
+    </div>
+    <div id="stopka2">
+
+        <img src="mute-black.png" id="icon">
+
+    </div>
+    <audio id="mysong" loop>
+        <source src="main.mp3" type="audio/mp3">
+    </audio>
+    <script>
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.volume = 0.5;
+                mysong.play();
+                icon.src = "icon-black.png";
+            }else{
+                mysong.pause();
+                icon.src = "mute-black.png";
+            }
+        }
+
+    </script>
 </body>
 </html>

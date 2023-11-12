@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EULA</title>
+    <style>
+        * {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .bottom-right {
+            z-index: 1;
+            color: red;
+        }
+
+        #video {
+            width: auto;
+            height: auto;
+        }
+
+        #intro {
+            display: none;
+        }
+
+        #eula {
+            text-align: center;
+        }
+
+        ol  {
+            text-align: left;
+            max-width: 700px;
+            border: 1px solid #333333;
+            background-color: #222222;
+            padding: 50px;
+            margin: 10px;
+        }
+
+        button  {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        li  {
+            margin: 5px;
+        }
+
+        #eulatekst  {
+            text-align: -webkit-center;
+        }
+
+        li::marker  {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        @media only screen and (max-width: 480px) and (orientation: portrait),
+        (max-width: 768px) and (orientation: landscape) {
+            .bottom-right {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media only screen and (min-width: 769px) {
+            .bottom-right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-right: 20px;
+            }
+        }
+    </style>
+    <script>
+           
+        function wielkosc() {
+            var video = document.getElementById('video');
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            video.style.width = width + 'px';
+            video.style.height = height + 'px';
+        }
+
+        window.onload = function () {
+            wielkosc();
+        }
+
+        window.addEventListener('resize', function () {
+            wielkosc();
+        });
+
+        function accept() {
+            document.getElementById("intro").style.display = "block";
+            document.getElementById("eula").style.display = "none";
+            var newTitle = "STARTUP...";
+        
+            if (document.title != newTitle) {
+                document.title = newTitle;
+            }
+            video.play();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="eula">
+        <h1>Zanim przejdziesz do gry...</h1>
+        <div id="eulatekst"><em>
+            <ol>
+                <li>Niniejsza umowa reguluje korzystanie z gry KUTAKSUK - NAJLEPSZA GRA W KÓŁKO I KRZYŻYK, która jest
+                dostępna na stronie kutaksuk.eu.</li>
+                <li>Gra KUTAKSUK - NAJLEPSZA GRA W KÓŁKO I KRZYŻYK jest własnością właściciela strony kutaksuk.eu i jest
+                chroniona prawem autorskim.</li>
+                <li>Gra KUTAKSUK - NAJLEPSZA GRA W KÓŁKO I KRZYŻYK jest udostępniona użytkownikowi wyłącznie w celach
+                rozrywkowych i nie może być wykorzystywana w celach komercyjnych.</li>
+                Użytkownik nie ma prawa do kopiowania, modyfikowania, dystrybuowania ani sprzedawania gry KUTAKSUK -
+                <li>NAJLEPSZA GRA W KÓŁKO I KRZYŻYK bez wyraźnej zgody właściciela strony kutaksuk.eu.</li>
+                <li>Gra KUTAKSUK - NAJLEPSZA GRA W KÓŁKO I KRZYŻYK jest udostępniona użytkownikowi “tak jak jest” i
+                właściciel strony kutaksuk.eu nie ponosi odpowiedzialności za jakiekolwiek szkody wynikłe z korzystania
+                z gry.</li>
+                <li>Użytkownik ponosi pełną odpowiedzialność za korzystanie z gry KUTAKSUK - NAJLEPSZA GRA W KÓŁKO I
+                KRZYŻYK.</li>
+                <li>Właściciel strony kutaksuk.eu zastrzega sobie prawo do zmiany niniejszej umowy w dowolnym momencie bez
+                podania przyczyny.</li>
+                <li>Niniejsza umowa podlega prawu polskiemu i wszelkie spory wynikłe z jej stosowania będą rozstrzygane
+                przez właściwe sądy polskie.</li>
+            </ol>
+            </em></div>
+        <button onclick="accept()">Akceptuj</button>
+    </div>
+
+    <div id="intro">
+        <video id="video" src="intro.mp4" controlslist="nodownload" onended="window.location.href='menu.html';" 
+            style="width: 100%; height: 100%; object-fit: fill;">
+        </video>
+
+        <div class="bottom-right">
+            <p>Kliknij Enter, aby pominąć intro...</p>
+        </div>
+    </div>
+
+    <script>
+
+            document.addEventListener('keydown', function (event) {
+            if (event.code === 'Enter') {
+                
+                window.location.href = 'menu.html';
+                
+                
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.code === 'Space') {
+                event.preventDefault();
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
