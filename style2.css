@@ -1,0 +1,40 @@
+body{
+    
+    background-image: url(bg.gif);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    color: white;
+}
+
+
+form{
+    margin-top: 10%;
+    top: 50px;
+}
+
+input{
+    width: 150px;
+    height: 25px;
+    margin-bottom: 30px;
+
+}
+
+input[type="submit"]{
+    width: 110px;
+
+}
+
+
+
+
+
+button{
+    background-color: rgb(255, 222, 222);
+    height: 25px;
+    min-width: 90px;
+
+}
+
