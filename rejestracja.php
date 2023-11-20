@@ -24,10 +24,11 @@
 
     if ($wyn->num_rows > 0) {
         echo "Konto o nazwie '$nazwa' już istnieje! Użyj innego loginu dla swojego konta.";
+        header("refresh:3;url=rejestracja.html");
     } else {
-        $insert_query = "INSERT INTO uzytkownicy (nazwa, haslo) VALUES ('$nazwa', '$haslo')";
+        $q2 = "INSERT INTO uzytkownicy (nazwa, haslo) VALUES ('$nazwa', '$haslo')";
         
-        if ($conn->query($insert_query) === TRUE) {
+        if ($conn->query($q2) === TRUE) {
             echo "Pomyślnie stworzono konto: " . $nazwa . "!!!";
         } else {
             echo "Coś poszło nie tak przy tworzeniu konta: " . $conn->error;
@@ -36,7 +37,7 @@
 
     $conn->close();
 
-    header("refresh:3;url=index.php");
+    header("refresh:4;url=login.html");
 ?>
 
 </body>

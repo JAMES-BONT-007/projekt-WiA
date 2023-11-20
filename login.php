@@ -13,13 +13,13 @@
     $nazwa = $_POST["nazwa"];
     $haslo = sha1($_POST["haslo"]);
 
-    $conn = new mysqli("127.0.0.1", "root", "", "tictactoeDB");
+    $conn = new mysqli("127.0.0.1", "root", "", "tictactoedb");
 
     if ($conn->connect_error) {
         echo "cos poszło nie tak ¯\_(ツ)_/¯";
     }
 
-    $q = "SELECT * FROM users WHERE nazwa='$nazwa' AND haslo='$haslo'";
+    $q = "SELECT * FROM uzytkownicy WHERE nazwa='$nazwa' AND haslo='$haslo'";
     $wynik = $conn->query($q);
 
     if ($wynik->num_rows > 0) {
@@ -28,7 +28,7 @@
 
     $conn->close();
 
-header("refresh:3;url=index.php"); 
+header("refresh:3;url=menu.php"); 
 ?>
 
 </body>
