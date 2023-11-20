@@ -10,7 +10,16 @@
 <body>
     
     <div id="naglowek1">
+        <?php
 
+            if(isset($_COOKIE["konto"])){
+                $zalogowano = True;
+                $login = $_COOKIE["konto"];
+
+                echo "Zalogowano jako ". $login;
+            }
+            
+        ?>
         
 
     </div>
@@ -53,8 +62,8 @@
         
         icon.onclick = function(){
             if(audio.paused){
-                mysong.volume = 0.5;
-                mysong.play();
+                audio.volume = 0.5;
+                audio.play();
                 icon.src = "icon-black.png";
             }else{
                 audio.pause();

@@ -23,7 +23,10 @@
     $wynik = $conn->query($q);
 
     if ($wynik->num_rows > 0) {
-        setcookie("konto", $nazwa, time()+3600);
+        setcookie("konto", $nazwa, time()+3600);  
+        echo "Siema ".$nazwa."!!";
+    }else{
+        echo "podany login lub hasło jest nieprawidłowe!";
     }
 
     $conn->close();
