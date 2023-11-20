@@ -53,8 +53,8 @@
         
         icon.onclick = function(){
             if(audio.paused){
-                mysong.volume = 0.5;
-                mysong.play();
+                audio.volume = 0.5;
+                audio.play();
                 icon.src = "icon-black.png";
             }else{
                 audio.pause();
