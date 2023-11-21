@@ -11,6 +11,7 @@
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
+            overflow: hidden;
         }
 
         .bottom-right {
@@ -139,7 +140,7 @@
     </div>
 
     <div id="intro">
-        <video id="video" src="intro.mp4" controlslist="nodownload" onended="window.location.href='menu.html';" 
+        <video id="video" src="intro.mp4" controlslist="nodownload" onended="window.location.href='menu.php';" 
             style="width: 100%; height: 100%; object-fit: fill;">
         </video>
 
@@ -153,7 +154,7 @@
             document.addEventListener('keydown', function (event) {
             if (event.code === 'Enter') {
                 
-                window.location.href = 'menu.html';
+                window.location.href = 'menu.php';
                 
                 
             }

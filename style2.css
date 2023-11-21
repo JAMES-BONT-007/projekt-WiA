@@ -13,6 +13,7 @@ body{
 form{
     margin-top: 10%;
     top: 50px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 input{
@@ -37,4 +38,5 @@ button{
     min-width: 90px;
 
 }
+
 
