@@ -65,7 +65,7 @@
         <img id="firma" src="tutelmaciek.png" alt="logo_studia" />
     </div>
     <audio id="audio" loop>
-        <source src="main.mp3" type="audio/mp3">
+        <source src="kusy_freestyle.mp3" type="audio/mp3">
     </audio>
     <script>
         var audio = document.getElementById("audio");
