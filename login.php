@@ -25,8 +25,15 @@
     if ($wynik->num_rows > 0) {
         setcookie("konto", $nazwa, time()+3600);  
         echo "Siema ".$nazwa."!!";
+
+        $q2 = "INSERT INTO `log` (`opis operacji`) VALUES ('zalogowanie do konta $nazwa')";
+        $conn->query($q2);
+
     }else{
         echo "podany login lub hasło jest nieprawidłowe!";
+
+        $q3 = "INSERT INTO `log` (`opis operacji`) VALUES ('niepowodzenie zalogowania do konta $nazwa')";
+        $conn->query($q3);
     }
 
     $conn->close();

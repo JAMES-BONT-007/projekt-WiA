@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="rejestracja.php" method="POST">
-        <input type="text" name="nazwa" placeholder="Nazwa użytkownika" id="im"> <br>
-        <input type="password" name="haslo" placeholder="Hasło" id="has"> <br>
+        <input type="text" name="nazwa" minlength="4" maxlength="16" pattern="[a-zA-Z0-9]+" placeholder="Nazwa użytkownika" id="im" title="Dozwolone są litery (wielkie i małe) oraz cyfry." required> <br>
+        <input type="password" name="haslo" minlength="4" maxlength="16" pattern="[a-zA-Z0-9!*,]+" placeholder="Hasło" id="has" title="Dozwolone są litery (wielkie i małe) oraz cyfry i zanki specjalne '!' '*'" required> <br>
 
         <input type="submit" value="Zarejestruj!">
     </form>
