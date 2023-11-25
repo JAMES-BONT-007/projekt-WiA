@@ -7,6 +7,12 @@
   <title>Get Element Position</title>
 
   <style>
+    body{
+      overflow: hidden;
+
+
+    }
+
     .center {
       align-items: center;
       justify-content: center;
@@ -44,6 +50,32 @@
         top: var(--startY);
       }
     }
+
+
+    #xd{
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      height: 100vh;
+      width: 100vw;
+
+      background-color: rgba(0, 0, 0, 0.548);
+    }
+
+    #xd > p{
+      text-align: center;
+      margin-top: 15%;
+      font-size: 800%;
+
+
+    }
+
+
+    @keyframes slidein {
+      to{
+        top: 0%;
+      }
+    }
   </style>
 
 
@@ -73,7 +105,12 @@
       </tbody>
     </table><br><br><br><br>
 
-    <button onclick="animacja()">kliknij mnie</button>
+    <button onclick="animacja1()">animacja 1</button><br>
+    <button onclick="animacja2()">animacja 2</button>
+
+    <div id="xd">
+        <p>Wygrał X, a może O, a kto wie</p>
+    </div>
   </div>
 
   <script>
@@ -113,9 +150,15 @@
     document.documentElement.style.setProperty('--end', `${endX}px`);
     document.documentElement.style.setProperty('--dlugosc', `${dlugosc}px`);
 
-    function animacja() {
+    function animacja1() {
       const linia = document.getElementById('linia');
-      linia.style.animation = 'animacja 4s linear';
+      linia.style.animation = 'animacja 1.5s linear forwards';
+    }
+
+
+    function animacja2() {
+      const xd = document.getElementById('xd');
+      xd.style.animation = 'slidein 3s ease-out forwards';
     }
 
   </script>
