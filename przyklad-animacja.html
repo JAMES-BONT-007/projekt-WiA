@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Element Position</title>
+
+  <style>
+    .center {
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    table,
+    td {
+      margin: auto;
+      border: 1px solid red;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 30px;
+    }
+
+    #linia {
+      width: 0px;
+      height: 5px;
+      background-color: blue;
+      position: absolute;
+    }
+
+    @keyframes animacja {
+      0% {
+        width: 0px;
+        left: var(--startX);
+        top: var(--startY);
+      }
+
+      100% {
+        width: var(--dlugosc);
+        left: var(--startX);
+        top: var(--startY);
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div id="linia"></div>
+
+  <div class="center">
+    <table>
+      <tbody>
+        <tr id="tr1">
+          <td onclick="klik(1)" id="td_1">1</td>
+          <td onclick="klik(2)" id="td_2">2</td>
+          <td onclick="klik(3)" id="td_3">3</td>
+        </tr>
+        <tr id="tr2">
+          <td onclick="klik(4)" id="td_4">4</td>
+          <td onclick="klik(5)" id="td_5">5</td>
+          <td onclick="klik(6)" id="td_6">6</td>
+        </tr>
+        <tr id="tr3">
+          <td onclick="klik(7)" id="td_7">7</td>
+          <td onclick="klik(8)" id="td_8">8</td>
+          <td onclick="klik(9)" id="td_9">9</td>
+        </tr>
+      </tbody>
+    </table><br><br><br><br>
+
+    <button onclick="animacja()">kliknij mnie</button>
+  </div>
+
+  <script>
+
+    const td1 = document.getElementById('td_1');
+    const td2 = document.getElementById('td_2');
+    const td3 = document.getElementById('td_3');
+    const td4 = document.getElementById('td_4');
+    const td5 = document.getElementById('td_5');
+    const td6 = document.getElementById('td_6');
+    const td7 = document.getElementById('td_7');
+    const td8 = document.getElementById('td_8');
+    const td9 = document.getElementById('td_9');
+
+    const a1 = td1.getBoundingClientRect();
+    const a2 = td2.getBoundingClientRect();
+    const a3 = td3.getBoundingClientRect();
+    const a4 = td4.getBoundingClientRect();
+    const a5 = td5.getBoundingClientRect();
+    const a6 = td6.getBoundingClientRect();
+    const a7 = td7.getBoundingClientRect();
+    const a8 = td8.getBoundingClientRect();
+    const a9 = td9.getBoundingClientRect();
+
+
+
+
+
+    startY = (a1.top + (a1.height/2)) + window.scrollY
+    startX = a1.left - 30;
+    endX = a3.right + 30;
+
+    dlugosc = endX - startX
+
+    document.documentElement.style.setProperty('--startX', `${startX}px`);
+    document.documentElement.style.setProperty('--startY', `${startY}px`);
+    document.documentElement.style.setProperty('--end', `${endX}px`);
+    document.documentElement.style.setProperty('--dlugosc', `${dlugosc}px`);
+
+    function animacja() {
+      const linia = document.getElementById('linia');
+      linia.style.animation = 'animacja 4s linear';
+    }
+
+  </script>
+</body>
+
+</html>
