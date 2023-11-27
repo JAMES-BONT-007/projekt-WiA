@@ -84,7 +84,7 @@ img {
     width: 100%;
     height: auto;
     float: left;
-    margin-bottom: 200px;
+    margin-bottom: 220px;
 }
 #login{
 
@@ -111,7 +111,6 @@ img {
     transform: translateY(4px);
 
 }
-
 #login:hover{
 
     background-color: #003a7d;
@@ -128,9 +127,12 @@ p{
 
     text-align: center;
     background-color: #666965;
-    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
     font-family: 'VT323', monospace;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     outline: none;

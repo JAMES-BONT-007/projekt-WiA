@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie użytkownika</title>
     <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/x-icon" href="ave.ico">
 </head>
 <body>
 <div id="konto">
@@ -24,6 +25,7 @@
 
     if ($wynik->num_rows > 0) {
         setcookie("konto", $nazwa, time()+3600);  
+        echo "Zalogowano pomyślnie"."<br>";
         echo "Siema ".$nazwa."!!";
 
         $q2 = "INSERT INTO `log` (`opis operacji`) VALUES ('zalogowanie do konta $nazwa')";
