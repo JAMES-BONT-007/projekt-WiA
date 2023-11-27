@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    
+    background-color: beige;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    background-color: rgb(245, 208, 153);
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    border: solid;
+    border: solid 1px black;
+    transition: .5s;
+}
+
+td:hover {
+    background-color: rgb(236, 183, 103);
+    transition: .5s;
+}
+
+td {
+    width: 128px;
+    height: 128px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.inp_player_1 {
+    height: 50px;
+    width: 100px;
+}
+
+.inp_player_2 {
+    height: 50px;
+    width: 100px;
+}
+
+.changer {
+    float: right;
+}
+
+.changel {
+    float: left;
+}
+
+.player1 {
+    width: 50%;
+    float: left;
+}
+
+.player2 {
+    width: 50%;
+    float: right;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.img_change {
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: transform .7s ease-in-out;
+    cursor: pointer;
+}
+
+.img_change:hover {
+    transform: rotate(360deg);
+}
+
+.segment_g1 {
+    width: fit-content;
+    float: right;
+    padding: 10px;
+}
+
+.segment_g2 {
+    width: fit-content;
+    float: left;
+    padding: 10px;
+}
+#login{
+
+    
+    
+    margin-top: 100px;
+    background-color: #0031e3;
+    padding: 2%;
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding-top: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 2%;
+ 
+}
+h1{
+    font-size: 60px;
+    font-family: 'VT323', monospace;
+
+}
+#lewy,#srodek,#prawy{
+
+    padding-top: 200px;
+    height: 79vh;
+    
+}
+#lewy{
+    
+    width: 20%;
+    float: left;
+    
+}
+#srodek{
+    border-left: 1px solid black;
+    width: 60%;
+    float: left;
+    border-right: 1px solid black;
+}
+#prawy{
+
+    width: 18%;
+    float: right;
+    
+}
+#albion{
+
+    width: 80%;
+
+}
+#tie{
+
+    width: 50%;
+
+}
+#lost{
+
+    width: 30%;
+
+}
+

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="ave.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie do TIC TAC TOE</title>
@@ -8,16 +9,16 @@
 </head>
 <body>
     <form action="login.php" method="POST">
-        <input type="text" name="nazwa" minlength="4" maxlength="16" placeholder="Nazwa użytkownika" id="im"> <br>
-        <input type="password" name="haslo" minlength="4" maxlength="16" placeholder="Hasło" id="has"> <br>
+        <input id="user" type="text" name="nazwa" minlength="4" maxlength="16" placeholder="Nazwa użytkownika" id="im"> <br>
+        <input id="user" type="password" name="haslo" minlength="4" maxlength="16" placeholder="Hasło" id="has"> <br>
 
-        <input type="submit" value="Zaloguj!">
+        <input id="login" type="submit" value="Zaloguj!">
     </form>
 
 
 
     <p>nie masz konta?</p>
-    <button onclick="location.href='rejestracja.html'">
+    <button id="login" onclick="location.href='rejestracja.html'">
         Zarejestruj się
     </button>
     

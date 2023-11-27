@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="ave.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie do TIC TAC TOE</title>
@@ -8,16 +9,16 @@
 </head>
 <body>
     <form action="rejestracja.php" method="POST">
-        <input type="text" name="nazwa" minlength="4" maxlength="16" pattern="[a-zA-Z0-9]+" placeholder="Nazwa użytkownika" id="im" title="Dozwolone są litery (wielkie i małe) oraz cyfry." required> <br>
-        <input type="password" name="haslo" minlength="4" maxlength="16" pattern="[a-zA-Z0-9!*,]+" placeholder="Hasło" id="has" title="Dozwolone są litery (wielkie i małe) oraz cyfry i zanki specjalne '!' '*'" required> <br>
+        <input id="user" type="text" name="nazwa" minlength="4" maxlength="16" pattern="[a-zA-Z0-9]+" placeholder="Nazwa użytkownika" id="im" title="Dozwolone są litery (wielkie i małe) oraz cyfry." required> <br>
+        <input id="user" type="password" name="haslo" minlength="4" maxlength="16" pattern="[a-zA-Z0-9!*,]+" placeholder="Hasło" id="has" title="Dozwolone są litery (wielkie i małe) oraz cyfry i zanki specjalne '!' '*'" required> <br>
 
-        <input type="submit" value="Zarejestruj!">
+        <input id="login" type="submit" value="Zarejestruj!">
     </form>
 
 
 
     <p>Masz juz konto?</p>
-    <button onclick="location.href='login.html'">
+    <button id="login" onclick="location.href='login.html'">
         Zaloguj
     </button>
     

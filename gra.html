@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>kolko</title>
+    
     <script>
+        var obrazek = document.createElement("img");
         var count = 0;
         var x = 0;
         var o = 0;
+        
+        
+  
+ 
         const plansza = [
             [0, 0, 0],
             [0, 0, 0],
@@ -23,6 +29,7 @@
                     document.getElementById(place).src = "x_sign.png";
                     document.getElementById(place).className = "x_img";
                     document.getElementById("td_" + place).removeAttribute("onclick");
+                    
                     if (place < 4) {
                         plansza[0][place - 1] = 1;
                     } else if (place < 7) {
@@ -46,32 +53,41 @@
             }
             for (i = 0; i < 3; i++) {
                 if (plansza[i][0] + plansza[i][1] + plansza[i][2] == 3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz x wygral";
+                    
+                    
+                    window.location.href = "win.html";
                 } else if (plansza[i][0] + plansza[i][1] + plansza[i][2] == -3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz o wygral";
+                    
+                    
+                    window.location.href = "lost.html";
                 } else if (plansza[0][i] + plansza[1][i] + plansza[2][i] == 3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz x wygral";
+                    
+                    
+                    window.location.href = "win.html";
                 } else if (plansza[0][i] + plansza[1][i] + plansza[2][i] == -3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz o wygral";
+                    
+                    
+                    window.location.href = "lost.html";
                 } else if (plansza[0][0] + plansza[1][1] + plansza[2][2] == 3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz x wygral";
+                    
+                    
+                    window.location.href = "win.html";
                 } else if (plansza[0][0] + plansza[1][1] + plansza[2][2] == -3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz o wygral";
+                    
+                    
+                    window.location.href = "lost.html";
                 } else if (plansza[0][2] + plansza[1][1] + plansza[2][0] == 3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz x wygral";
+                    
+                    
+                    window.location.href = "win.html";
                 } else if (plansza[0][2] + plansza[1][1] + plansza[2][0] == -3) {
-                    open_modal();
-                    document.getElementById('won').innerHTML = "gracz o wygral";
+                    
+                    
+                    window.location.href = "lost.html";
                 } else if (count == 9) {
-                    open_modal();
+                    
                     document.getElementById('won').innerHTML = "remis";
+                    window.location.href = "tie.html";
                 }
             }
             console.log(plansza);
