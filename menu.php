@@ -38,17 +38,21 @@
     <div id="main">
 
         <?php 
-        
             if($zalogowano){
                 echo '<button id="login" onclick="location.href=\'gra.html\'">GRAJ </button> <br> <br>';
+                echo '<br>';
+                echo '<br>';
+                echo '<br>';
+                echo '<br>';
                 echo '<button id="guest" onclick="location.href=\'logout.php\'">wyloguj</button>';
+
             }else{
                 echo '<button id="login" onclick="location.href=\'login.html\'">ZALOGUJ </button>';
                 echo '<p>Nie masz konta?</p>';
                 echo '<button id="guest" onclick="location.href=\'gra.html\'">GRAJ JAKO GOŚĆ</button>';
+                
             }
         ?>
-
 
 
     </div>
@@ -65,7 +69,7 @@
         <img id="firma" src="tutelmaciek.png" alt="logo_studia" />
     </div>
     <audio id="audio" loop>
-        <source src="kusy_freestyle.mp3" type="audio/mp3">
+        <source src="main.mp3" type="audio/mp3">
     </audio>
     <script>
         var audio = document.getElementById("audio");
