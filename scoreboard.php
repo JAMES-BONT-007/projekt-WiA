@@ -14,17 +14,37 @@
     table{
         margin-left: auto;
         margin-right: auto;
+        width: 45%
     }
 
     table, tr, td{
-
         background-color: #33a6b8;
         border: 1px solid black;
         border-collapse: collapse;
+        text-align: center;
+    }
+    
+    tr:not(:nth-child(1)) > td:nth-child(1){
+        text-align: right;
+
+    }
+
+    tr:nth-child(even) > td{
+        background-color: #0291a8;
+
+    }
+
+    tr:nth-child(odd) > td{
+        background-color: #36e3ff;
+
+    }
+
+    tr > td:nth-child(1){
+        width: 15%;
     }
 
     tr:nth-child(1) > td{
-        background-color: #34eb46;
+        background-color: #0045ad;
 
     }
 
@@ -87,7 +107,7 @@
         $wynik = $conn->query($q);
         
         if($wynik->num_rows > 0) {
-            echo "<table><tr><td>Numer w rankingu</td><td> Nazwa użtkownika </td><td> Ranking</td></tr>";
+            echo "<table><tr><td>Nr w rankingu</td><td> Nazwa użtkownika </td><td> Ranking</td></tr>";
             while($row= $wynik->fetch_array()){
 
                 echo "<tr><td>". $licz ."</td><td>".$row[1]."</td><td>". $row[3]."</td></tr>";
