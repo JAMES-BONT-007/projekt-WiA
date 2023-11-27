@@ -1,26 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="icon" type="image/x-icon" href="ave.ico">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie do TIC TAC TOE</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>KS THE GAME</title>
+    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="icon" type="image/x-icon" href="ave.ico">
+
+
 </head>
+
 <body>
-    <form action="login.php" method="POST">
-        <input id="user" type="text" name="nazwa" minlength="4" maxlength="16" placeholder="Nazwa użytkownika" id="im"> <br>
-        <input id="user" type="password" name="haslo" minlength="4" maxlength="16" placeholder="Hasło" id="has"> <br>
 
-        <input id="login" type="submit" value="Zaloguj!">
-    </form>
+    <div id="naglowek1">
+      
 
 
+    </div>
+    <div id="naglowek2">
 
-    <p>nie masz konta?</p>
-    <button id="login" onclick="location.href='rejestracja.html'">
-        Zarejestruj się
-    </button>
+        <img id="logo" src="logo.png" alt="logo_gry" />
+
+    </div>
+    <div id="naglowek3">
+
+        
+
+    </div>
+    <div id="main">
+
+        <form autocomplete="off" action="login.php" method="POST">
+            <input id="input" type="text" name="nazwa" minlength="4" maxlength="16" placeholder="Nazwa użytkownika..." id="im"> <br>
+            <input id="input" type="password" name="haslo" minlength="4" maxlength="16" placeholder="Hasło..." id="has"> <br>
+    
+            <input id="button" type="submit" value="Zaloguj!">
+        </form>
+    
+    
+    
+        <p>nie masz konta?</p>
+        <button id="button" onclick="location.href='rejestracja.html'">
+            Zarejestruj się
+        </button>
+
+
+    </div>
+
+
+    <div id="stopka1">
+
+        <h5>&copy; MASNY TUTEL, WSZELKIE PRAWA ZASTRZEŻONE</h5>
+
+    </div>
+    <div id="stopka2">
+
+
+        <img id="firma" src="tutelmaciek.png" alt="logo_studia" />
+    </div>
+    <audio id="audio" loop>
+        <source src="main.mp3" type="audio/mp3">
+    </audio>
     
 </body>
+
 </html>

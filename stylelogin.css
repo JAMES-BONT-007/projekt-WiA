@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 @media only screen and (max-width: 480px) and (orientation: portrait),
         (max-width: 768px) and (orientation: landscape) {
             .bottom-right {
@@ -56,11 +57,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-#logo{
-
-    width: 50%;
-
-}
 #naglowek3{
     
     width: 25%;
@@ -79,102 +75,23 @@ img {
 
 
 #main{
-    margin-top: 90px;
+
     text-align: center;
     width: 100%;
     height: auto;
     float: left;
     margin-bottom: 200px;
-}
-#login{
-
-    
-    
-    margin-top: 100px;
-    background-color: #0088e3;
-    padding: 2%;
-    font-family: 'VT323', monospace;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    padding-top: 2%;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-bottom: 2%;
- 
-}
-#login:active {
-    background-color: #0088e3;
-    transform: translateY(4px);
-
+    padding-top: 5%;
 }
 
-#login:hover{
-
-    background-color: #003a7d;
-    
-}
 p{
     margin-top: 60px;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 60px;
+    font-size: 20px;
+    margin-bottom: 10px;
     color: #FFF;
-}
-#guest{
-
-    text-align: center;
-    background-color: #666965;
-    padding: 1%;
     font-family: 'VT323', monospace;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    
-
 }
-#guest:active {
 
-    background-color:#353634 ;
-    transform: translateY(4px);
-}
-#guest:hover{
-
-    background-color: #494a48;
-    
-
-}
-#score{
-
-    text-align: center;
-    background-color: #0088e3;
-    margin-top: 50px;
-    padding: 2%;
-    font-family: 'VT323', monospace;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-
-}
-#score:active {
-    background-color: #0088e3;
-    transform: translateY(4px);
-
-}
-#score:hover{
-
-    background-color: #003a7d;
-    
-}
 #icon{
 
     
@@ -188,7 +105,7 @@ p{
     float: left;
     text-align: left;
     max-width: 75%;
-    margin-top: none;
+    margin-top: 20px;
     clear: both;
     height: auto;
     
@@ -198,8 +115,8 @@ p{
     
     float: right;
     text-align: right;
-    max-width: 25%;
-    margin-top: none;
+    max-width: 20%;
+    margin-top: 3px;
     height: auto;
     filter: grayscale(100%);
     opacity: 0.5;
@@ -210,11 +127,57 @@ h5{
     color: white;
 
 }
-table{
-
+#input{
+    padding: 2%;
+    background-color: #0088e3;
+    border: 1px solid transparent;
+    margin-top: 10px;
     color: #FFF;
+    border-radius: 10px;
+    
+}
+#logo{
+
+    width: 50%;
 
 }
+#input:active{
+
+    background-color: #0088e3;
+    border: 1px solid transparent;
+    font-family: 'VT323', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
+}
+input::placeholder {
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    /* font-family: 'Roboto Mono', monospace; */
+  }
+#button{
+    margin-top: 30px;
+    background-color: #0088e3;
+    padding: 1%;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: #000;
+}
+#button:active {
+    background-color: #0088e3;
+    transform: translateY(4px);
+
+}
+#button:hover{
+
+    background-color: #003a7d;
+
+}
+
 @keyframes spinner {
     0%{
         transform: scale(0.1);

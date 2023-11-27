@@ -38,6 +38,7 @@ body{
     width: 25%;
     float: left;
     font-family: 'VT323', monospace;
+    font-size: 20px;
 
 }
 #naglowek2{
@@ -50,7 +51,91 @@ body{
     
 
 }
+select{
 
+    padding: 2%;
+    background-color: #0088e3;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    color: #FFF;
+    border-radius: 10px;
+
+}
+option{
+
+    padding-right: 20%;
+    background-color: #0088e3;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    color: #FFF;
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+select option[value="bot"]{
+
+    margin: 10px;
+
+}
+#guest{
+
+    text-align: center;
+    background-color: #666965;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    
+
+}
+#guest:active {
+
+    background-color:#353634 ;
+    transform: translateY(4px);
+}
+#guest:hover{
+
+    background-color: #494a48;
+    
+
+}
+#login{
+
+    
+    
+    margin-top: 30px;
+    background-color: #0088e3;
+    padding: 2%;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+ 
+}
+#login:active {
+    background-color: #0088e3;
+    transform: translateY(4px);
+
+}
+#login:hover{
+
+    background-color: #003a7d;
+    
+}
 img {
     
     max-width: 100%;
@@ -86,95 +171,17 @@ img {
     float: left;
     margin-bottom: 200px;
 }
-#login{
 
-    
-    
-    margin-top: 100px;
-    background-color: #0088e3;
-    padding: 2%;
-    font-family: 'VT323', monospace;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    padding-top: 2%;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-bottom: 2%;
- 
-}
-#login:active {
-    background-color: #0088e3;
-    transform: translateY(4px);
-
-}
-
-#login:hover{
-
-    background-color: #003a7d;
-    
-}
 p{
-    margin-top: 60px;
-    font-size: 25px;
-    font-weight: bold;
+    margin-top: 180px;
+    font-size: 45px;
+    
     margin-bottom: 60px;
     color: #FFF;
-}
-#guest{
-
-    text-align: center;
-    background-color: #666965;
-    padding: 1%;
     font-family: 'VT323', monospace;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    
-
 }
-#guest:active {
 
-    background-color:#353634 ;
-    transform: translateY(4px);
-}
-#guest:hover{
 
-    background-color: #494a48;
-    
-
-}
-#score{
-
-    text-align: center;
-    background-color: #0088e3;
-    margin-top: 50px;
-    padding: 2%;
-    font-family: 'VT323', monospace;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-
-}
-#score:active {
-    background-color: #0088e3;
-    transform: translateY(4px);
-
-}
-#score:hover{
-
-    background-color: #003a7d;
-    
-}
 #icon{
 
     

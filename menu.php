@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>KS THE GAME</title>
     <link rel="stylesheet" href="stylmenu.css">
-    <link rel="icon" type="image/x-icon" href="ave.ico">
+    <link rel="icon" type="image/x-icon" href="ikona.ico">
 
 
 </head>
@@ -18,7 +18,10 @@
             $zalogowano = True;
             $login = $_COOKIE["konto"];
 
-            echo "Zalogowano jako " . $login;
+            echo "<b>Zalogowano jako: " . $login."</b>";
+            echo '<br>';
+            echo '<br>';
+            echo '<button id="guest" onclick="location.href=\'logout.php\'">wyloguj</button>';
         }
 
         ?>
@@ -39,12 +42,13 @@
 
         <?php 
             if($zalogowano){
-                echo '<button id="login" onclick="location.href=\'gra.html\'">GRAJ </button> <br> <br>';
+                echo '<link rel="stylesheet" href="stylmenu1.css">';
+                echo '<button id="login" onclick="location.href=\'gra_wybor.php\'">GRAJ </button> <br> <br>';
+                echo '<button id="score" onclick="location.href=\'scoreboard.php\'">SCOREBOARD</button>';
                 echo '<br>';
                 echo '<br>';
                 echo '<br>';
-                echo '<br>';
-                echo '<button id="guest" onclick="location.href=\'logout.php\'">wyloguj</button>';
+                // echo '<button id="guest" onclick="location.href=\'logout.php\'">wyloguj</button>';
 
             }else{
                 echo '<button id="login" onclick="location.href=\'login.html\'">ZALOGUJ </button>';
@@ -77,7 +81,7 @@
 
         icon.onclick = function() {
             if (audio.paused) {
-                audio.volume = 0.5;
+                audio.volume = 0.3;
                 audio.play();
                 icon.src = "icon-black.png";
             } else {
