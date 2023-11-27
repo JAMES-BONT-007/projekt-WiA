@@ -46,9 +46,9 @@
         <p  for="playOption">WYBIERZ TRYB GRY:</p>
         
         <select name="gra" id="gra" onchange="zmiengraj()">
-            <option id="option" value="none" disabled selected hidden>TRYBY GRY</option>
+            <option id="option" value="none" disabled hidden>TRYBY GRY</option>
             <option id="option" value="solo">GRA Z GRACZEM OFFLINE</option>
-            <option id="option" value="Bot">GRA Z BOTEM</option>
+            <option id="option" value="Bot" selected>GRA Z BOTEM</option>
             
         </select>
         <br>

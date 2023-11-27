@@ -43,7 +43,7 @@
         <?php 
             if($zalogowano){
                 echo '<link rel="stylesheet" href="stylmenu1.css">';
-                echo '<button id="login" onclick="location.href=\'gra_wybor.php\'">GRAJ </button> <br> <br>';
+                echo '<button id="login" onclick="location.href=\'gra.php\'">GRAJ </button> <br> <br>';
                 echo '<button id="score" onclick="location.href=\'scoreboard.php\'">SCOREBOARD</button>';
                 echo '<br>';
                 echo '<br>';
@@ -52,8 +52,6 @@
 
             }else{
                 echo '<button id="login" onclick="location.href=\'login.html\'">ZALOGUJ </button>';
-                echo '<p>Nie masz konta?</p>';
-                echo '<button id="guest" onclick="location.href=\'gra.html\'">GRAJ JAKO GOŚĆ</button>';
                 
             }
         ?>
