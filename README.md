@@ -1,6 +1,6 @@
-https://james-bont-007.github.io/projekt-WiA/
+![logo.png](https://ttt.kutaksuck.eu/logo.png)
+## KUTAKSUCK - NAJLEPSZA GRA W KÓŁKO I KRZYŻYK
+**Kutaksuck** to gra logiczna, w której możesz zmierzyć się z klasyczną grą kółko i krzyżyk. Gra została stworzona przez *Tutel Maciek Studio*, polskie studio zajmujące się tworzeniem gier edukacyjnych i rozrywkowych. 
+W **Kutaksuck** możesz grać z botem lub z drugim graczem na tym samym urządzeniu. Możesz też zarejestrować się, aby zapisywać swoje wyniki i rywalizować z innymi graczami na tablicy wyników. Gra ma prosty i przyjazny interfejs, a także ciekawe efekty dźwiękowe i graficzne. 
 
-KUTAK sUCK beta⚠️WERSJA DEMONSTRACYJNA⚠️
-
-![Bez nazwy](https://github.com/JAMES-BONT-007/projekt-WiA/assets/90573374/b4653453-090e-4e61-b3b8-f92127dcebce)
-
+**Kutaksuck** to idealna gra dla fanów łamigłówek i zabawy z przyjaciółmi. :)
