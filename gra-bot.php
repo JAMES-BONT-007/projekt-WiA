@@ -1,13 +1,9 @@
 <?php
-<<<<<<< HEAD
 $bot = False;
 if(isset($_POST["gra"]) && $_POST["gra"] == "Bot"){
 
 $bot = True;    
 }
-=======
-$bot = "Bot";
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
 ?>
 
 <!DOCTYPE html>
@@ -18,13 +14,7 @@ $bot = "Bot";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
     <title>kolko</title>
-=======
-    <link rel="icon" type="image/x-icon" href="ikona.ico">
-    <title>KUTAKSUCK</title>
-
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
     <script>
         var count = 0;
         var x = 0;
@@ -89,22 +79,14 @@ $bot = "Bot";
                     } else {
                         plansza[2][place - 7] = 1;
                     }
-<<<<<<< HEAD
-=======
-
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
 
                     win()
                     <?php
-<<<<<<< HEAD
                         if($bot){
                             echo'setTimeout(() => {
                                 botRuch();
                             }, "350");';
                         }
-=======
-                    if ($bot == "Bot") {
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
 
                     ?>
                 }
@@ -120,37 +102,12 @@ $bot = "Bot";
                     } else {
                         plansza[2][place - 7] = -1;
                     }
-<<<<<<< HEAD
 
                     win()
-=======
-                }
-            }
-            for (i = 0; i < 3; i++) {
-                if (plansza[i][0] + plansza[i][1] + plansza[i][2] == 3) {
-                    window.location.href = "win.php";
-                } else if (plansza[i][0] + plansza[i][1] + plansza[i][2] == -3) {
-                    window.location.href = "lost.php";
-                } else if (plansza[0][i] + plansza[1][i] + plansza[2][i] == 3) {
-                    window.location.href = "win.php";
-                } else if (plansza[0][i] + plansza[1][i] + plansza[2][i] == -3) {
-                    window.location.href = "lost.php";
-                } else if (plansza[0][0] + plansza[1][1] + plansza[2][2] == 3) {
-                    window.location.href = "win.php";
-                } else if (plansza[0][0] + plansza[1][1] + plansza[2][2] == -3) {
-                    window.location.href = "lost.php";
-                } else if (plansza[0][2] + plansza[1][1] + plansza[2][0] == 3) {
-                    window.location.href = "win.php";
-                } else if (plansza[0][2] + plansza[1][1] + plansza[2][0] == -3) {
-                    window.location.href = "win.php";
-                } else if (count == 9) {
-                    window.location.href = "tie.html";
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
                 }
             }
             
         }
-<<<<<<< HEAD
 
 
 
@@ -164,95 +121,40 @@ $bot = "Bot";
             dialog.close();
             location.reload();
         }
-=======
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
     </script>
 </head>
 
 <body>
-<<<<<<< HEAD
     <div class="center">
         <dialog>
             <p id="won"></p>
             <button onclick="close_modal()">zamknij</button>
         </dialog>
-=======
 
-    <?php
+        <table>
+            <tr id='tr1'></tr>
+            <tr id='tr2'></tr>
+            <tr id='tr3'></tr>
+        </table>
 
-    if (isset($_COOKIE["konto"])) {
-        $zalogowano = True;
-        $login = $_COOKIE["konto"];
-
-
-    }
-
-    ?>
-
-    <div id="naglowek2">
-
-        <img id="logo" src="logo.png" alt="logo_gry" />
-
-    </div>
-    <div id="main1">
-        <img id="logo" src="O-bot.png" /><br>
-        <p>BOT</p>
-    </div>
-    <div id="main2">
-        <div class="center">
-            <dialog>
-                <p id="won"></p>
-                <button onclick="close_modal()">zamknij</button>
-            </dialog>
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
-
-            <table>
-                <tr id='tr1'></tr>
-                <tr id='tr2'></tr>
-                <tr id='tr3'></tr>
-            </table>
-
-<<<<<<< HEAD
         <script>
             var deb = 1;
             for (var i = 1; i <= 3; i++) {
                 for (var j = 0; j < 3; j++) {
                     document.getElementById('tr' + i).innerHTML += "<td onclick='klik(" + deb + ")' id='td_" + deb + "'><img src='./blank.png' id='" + deb + "' draggable='false'></td>";
                     deb++;
-=======
-            <script>
-
-                var deb = 1;
-                for (var i = 1; i <= 3; i++) {
-                    for (var j = 0; j < 3; j++) {
-                        document.getElementById('tr' + i).innerHTML += "<td onclick='klik(" + deb + ")' id='td_" + deb + "'><img src='./blank.png' id='" + deb + "' draggable='false'></td>";
-                        deb++;
-                    }
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
                 }
-                <?php
-                if ($bot) {
-                    echo 'if(count == 0){
+            }
+            <?php
+            if($bot){
+                echo 'if(count == 0){
                     ruchbot = Math.floor(Math.random() * 9) + 1;
                     klik(ruchbot);
                 }';
-<<<<<<< HEAD
             }
             ?>
-=======
-                }
->>>>>>> b8eda784165bd50c47efea4eeb90329cc39945ec
 
-                ?>
-
-            </script>
-        </div>
-    </div>
-    <div id="main3">
-        <img id="logo" src="x-gracz.png" /><br>
-        <?php
-        echo "<p>" . $login . "</p>";
-        ?>
+        </script>
     </div>
 </body>
 
