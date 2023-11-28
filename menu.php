@@ -14,6 +14,8 @@
     <div id="naglowek1">
         <?php
 
+        $zalogowano = false;
+
         if (isset($_COOKIE["konto"])) {
             $zalogowano = True;
             $login = $_COOKIE["konto"];
