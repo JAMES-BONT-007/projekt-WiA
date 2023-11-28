@@ -21,7 +21,7 @@
 
 body {
 
-    background-image: url(bg.gif);
+    background-image: url(tlo.gif);
     background-attachment: fixed;
     background-repeat: repeat;
     background-size: cover;
@@ -43,7 +43,6 @@ body {
     width: 25%;
     float: left;
     font-family: 'VT323', monospace;
-    font-size: 20px;
 
 }
 
@@ -55,100 +54,6 @@ body {
     float: left;
     font-family: 'VT323', monospace;
 
-
-}
-
-select {
-
-    padding: 2%;
-    background-color: #0088e3;
-    border: 1px solid transparent;
-    margin-top: 10px;
-    color: #FFF;
-    border-radius: 10px;
-
-}
-
-option {
-
-    padding-right: 20%;
-    background-color: #0088e3;
-    border: 1px solid transparent;
-    margin-top: 10px;
-    color: #FFF;
-    border-radius: 10px;
-    font-size: 20px;
-
-}
-
-select option[value="bot"] {
-
-    margin: 10px;
-
-}
-
-#guest {
-
-    text-align: center;
-    background-color: #666965;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    font-family: 'VT323', monospace;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-
-
-}
-
-#guest:active {
-
-    background-color: #353634;
-    transform: translateY(4px);
-}
-
-#guest:hover {
-
-    background-color: #494a48;
-
-
-}
-
-#login {
-
-
-
-    margin-top: 30px;
-    background-color: #0088e3;
-    padding: 2%;
-    font-family: 'VT323', monospace;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    padding-top: 1%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 1%;
-
-}
-
-#login:active {
-    background-color: #0088e3;
-    transform: translateY(4px);
-
-}
-
-#login:hover {
-
-    background-color: #003a7d;
 
 }
 
@@ -188,18 +93,106 @@ img {
     width: 100%;
     height: auto;
     float: left;
-    margin-bottom: 200px;
+    margin-bottom: 3%;
+}
+
+#login {
+
+
+
+    margin-top: 100px;
+    background-color: #0088e3;
+    padding: 2%;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+
+}
+
+#login:active {
+    background-color: #0088e3;
+    transform: translateY(4px);
+
+}
+
+#login:hover {
+
+    background-color: #003a7d;
+
 }
 
 p {
-    margin-top: 180px;
-    font-size: 45px;
-
+    margin-top: 60px;
+    font-size: 25px;
+    font-weight: bold;
     margin-bottom: 60px;
     color: #FFF;
-    font-family: 'VT323', monospace;
 }
 
+#guest {
+
+    text-align: center;
+    background-color: #666965;
+    padding: 1%;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+
+
+}
+
+#guest:active {
+
+    background-color: #353634;
+    transform: translateY(4px);
+}
+
+#guest:hover {
+
+    background-color: #494a48;
+
+
+}
+
+#score {
+
+    text-align: center;
+    background-color: #0088e3;
+    margin-top: 50px;
+    padding: 2%;
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+
+}
+
+#score:active {
+    background-color: #0088e3;
+    transform: translateY(4px);
+
+}
+
+#score:hover {
+
+    background-color: #003a7d;
+
+}
 
 #icon {
 
@@ -261,7 +254,65 @@ table {
 }
 
 
-#stopka1 {
+h1 {
+    color: white;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%
+}
+
+table,
+tr,
+td {
+    background-color: #33a6b8;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr:not(:nth-child(1))>td:nth-child(1) {
+    text-align: right;
+
+}
+
+tr:nth-child(even)>td {
+    background-color: #0291a8;
+
+}
+
+tr:nth-child(odd)>td {
+    background-color: #36e3ff;
+
+}
+
+tr>td:nth-child(1) {
+    width: 15%;
+}
+
+tr:nth-child(1)>td {
+    background-color: #0045ad;
+
+}
+
+tr:nth-child(2)>td {
+    background-color: #fcb434;
+
+}
+
+tr:nth-child(3)>td {
+    background-color: silver;
+
+}
+
+tr:nth-child(4)>td {
+    background-color: #a34b2a;
+
+}
+
+#stopka1{
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -271,11 +322,10 @@ table {
     margin-top: 30px;
     clear: both;
     height: auto;
-
-
+    
+    
 }
-
-#stopka2 {
+#stopka2{
     position: fixed;
     bottom: 0px;
     right: 0px;

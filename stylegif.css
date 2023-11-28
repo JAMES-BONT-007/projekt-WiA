@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-body {
+body{
     
-    background-color: beige;
-    text-align: center;
-}
+    background-image: url(bg.gif);
+     background-attachment: fixed;
+     background-repeat: repeat;
+     background-size: cover;
+     backdrop-filter: blur(10px);
+     text-align: center;
+     color: white;
+ }
 
 table {
     margin: auto;
@@ -132,10 +137,10 @@ h1{
     
 }
 #srodek{
-    border-left: 1px solid black;
+    border-left: 1px solid white;
     width: 60%;
     float: left;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
 }
 #prawy{
 
@@ -159,3 +164,29 @@ h1{
 
 }
 
+#stopka1{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    float: left;
+    text-align: left;
+    max-width: 75%;
+    margin-top: 30px;
+    clear: both;
+    height: auto;
+    
+    
+}
+#stopka2{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    float: right;
+    text-align: right;
+    max-width: 20%;
+    margin-top: 30px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    width: 10%;
+}
