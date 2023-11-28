@@ -2,7 +2,7 @@
                     $conn = new mysqli("127.0.0.1", "root", "", "tictactoedb");
                     $q = "UPDATE uzytkownicy SET ranking=ranking+15 WHERE nazwa='".$_COOKIE['konto']."';";
                     $wynik = $conn->query($q);
-                    ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylegif.css">
-    <link rel="icon" type="image/x-icon" href="ave.ico">
+    <link rel="icon" type="image/x-icon" href="ikona.ico">
     <title>kolko</title>
     <body>
         <div id="lewy">

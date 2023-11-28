@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie użytkownika</title>
     <link rel="stylesheet" href="style2.css">
-    <link rel="icon" type="image/x-icon" href="ave.ico">
+    <link rel="icon" type="image/x-icon" href="ikona.ico">
 </head>
 <body>
 <div id="konto">
