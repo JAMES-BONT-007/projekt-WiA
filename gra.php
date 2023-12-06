@@ -1,13 +1,9 @@
 <?php
-$bot = False;
-if(isset($_POST["gra"]) && $_POST["gra"] == "Bot"){
-
-$bot = True;    
-}
+$bot = "Bot";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +11,8 @@ $bot = True;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="ikona.ico">
-    <title>kolko</title>
+    <title>KUTAKSUCK</title>
+
     <script>
         var count = 0;
         var x = 0;
@@ -26,7 +23,6 @@ $bot = True;
             [0, 0, 0],
             [0, 0, 0]
         ]
-
 
         function win() {
             for (let i = 0; i < 3; i++) {
@@ -109,53 +105,71 @@ $bot = True;
             }
             
         }
-
-
-
-        function open_modal() {
-            const dialog = document.querySelector("dialog");
-            dialog.showModal();
-        }
-
-        function close_modal() {
-            const dialog = document.querySelector("dialog");
-            dialog.close();
-            location.reload();
-        }
     </script>
 </head>
 
 <body>
-    <div class="center">
-        <dialog>
-            <p id="won"></p>
-            <button onclick="close_modal()">zamknij</button>
-        </dialog>
 
-        <table>
-            <tr id='tr1'></tr>
-            <tr id='tr2'></tr>
-            <tr id='tr3'></tr>
-        </table>
+    <?php
 
-        <script>
-            var deb = 1;
-            for (var i = 1; i <= 3; i++) {
-                for (var j = 0; j < 3; j++) {
-                    document.getElementById('tr' + i).innerHTML += "<td onclick='klik(" + deb + ")' id='td_" + deb + "'><img src='./blank.png' id='" + deb + "' draggable='false'></td>";
-                    deb++;
+    if (isset($_COOKIE["konto"])) {
+        $zalogowano = True;
+        $login = $_COOKIE["konto"];
+
+
+    }
+
+    ?>
+
+    <div id="naglowek2">
+
+        <img id="logo" src="logo.png" alt="logo_gry" />
+
+    </div>
+    <div id="main1">
+        <img id="logo" src="O-bot.png" /><br>
+        <p>BOT</p>
+    </div>
+    <div id="main2">
+        <div class="center">
+            <dialog>
+                <p id="won"></p>
+                <button onclick="close_modal()">zamknij</button>
+            </dialog>
+
+            <table>
+                <tr id='tr1'></tr>
+                <tr id='tr2'></tr>
+                <tr id='tr3'></tr>
+            </table>
+
+            <script>
+
+                var deb = 1;
+                for (var i = 1; i <= 3; i++) {
+                    for (var j = 0; j < 3; j++) {
+                        document.getElementById('tr' + i).innerHTML += "<td onclick='klik(" + deb + ")' id='td_" + deb + "'><img src='./blank.png' id='" + deb + "' draggable='false'></td>";
+                        deb++;
+                    }
                 }
-            }
-            <?php
-            if($bot){
-                echo 'if(count == 0){
+                <?php
+                if ($bot) {
+                    echo 'if(count == 0){
                     ruchbot = Math.floor(Math.random() * 9) + 1;
                     klik(ruchbot);
                 }';
-            }
-            ?>
+                }
 
-        </script>
+                ?>
+
+            </script>
+        </div>
+    </div>
+    <div id="main3">
+        <img id="logo" src="x-gracz.png" /><br>
+        <?php
+        echo "<p>" . $login . "</p>";
+        ?>
     </div>
 </body>
 
