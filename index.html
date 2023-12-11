@@ -146,13 +146,27 @@
         </video>
 
         <div class="bottom-right">
+            <p ontouchstart="skip()"></p>
             <p>Kliknij Enter, aby pominąć intro...</p>
         </div>
     </div>
 
     <script>
+            function skip(){
 
+                window.location.href = 'menu.php';
+
+
+            }
             document.addEventListener('keydown', function (event) {
+            if (event.code === 'Enter') {
+                
+                window.location.href = 'menu.php';
+                
+                
+            }
+        });
+        document.addEventListener('keydown', function (event) {
             if (event.code === 'Enter') {
                 
                 window.location.href = 'menu.php';
